@@ -41,7 +41,7 @@ a {
 
 .message {
   position: relative;
-  top: 50vh;
+  top: 38vh;
   width: 100%;
   font-size: 3em;
   text-align: center;
@@ -197,7 +197,7 @@ a {
 .typed-cursor {
   font-size: 1.4em;
   line-height: 0;
-  letter-spacing: -12px;
+  letter-spacing: -14px;
   position: relative;
   top: 2px;
   left: -5px;
@@ -243,6 +243,14 @@ a {
   .social {
     width: 50%;
   }
+
+  .typed-cursor {
+    letter-spacing: -12px;
+  }
+
+  .message {
+    top: 50vh;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -254,6 +262,15 @@ a {
   .social {
     width: 30%;
   }
+}
+
+@media only screen
+  and (max-device-width: 640px),
+  only screen and (max-device-width: 667px),
+  only screen and (max-width: 480px) {
+    .main {
+      height: 90vh;
+    }
 }
 
 @-webkit-keyframes show-shell {
