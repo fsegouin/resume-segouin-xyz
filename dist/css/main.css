@@ -1,0 +1,338 @@
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Lato:400);
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  background: #2c3e50;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #ecf0f1;
+  margin: 0;
+}
+
+a {
+  text-decoration:none;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.message {
+  position: relative;
+  top: 50vh;
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+}
+
+.shell {
+  position: absolute;
+  opacity: 1;
+  bottom: 25vh;
+  margin: 0 10vw;
+  width: 80vw;
+  height: 50vh;
+  background-color: #e5e5e5;
+  box-shadow: 5px 10px 10px rgba(0,0,0,0.2);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-animation: show-shell 2s ease-in-out;
+          animation: show-shell 2s ease-in-out;
+}
+
+.shell--hidden {
+  -webkit-animation: hide-shell 1s ease-in-out forwards;
+          animation: hide-shell 1s ease-in-out forwards;
+}
+
+.shell--minimized {
+  bottom: -37vh;
+  -webkit-animation: minimize-shell 1s ease-in-out;
+          animation: minimize-shell 1s ease-in-out;
+}
+
+.shell--maximized {
+  bottom: 25vh;
+  -webkit-animation: maximize-shell 1s ease-in-out;
+          animation: maximize-shell 1s ease-in-out;
+}
+
+.shell__window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #181818;
+  padding: 20px;
+}
+
+.shell__container {
+  color: #d8d8d8;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 16px;
+}
+
+.shell__container p {
+  margin: 0;
+  display: inline;
+}
+
+.dots__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 43px;
+  padding: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dots__dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.dots__dot--close {
+  background-color: #FF5F56;
+  border: 1px solid #E14640;
+}
+
+.dots__dot--close:hover{
+  background-image: url('/img/dot_close.svg');
+  background-size: 10px 9px;
+  background-position: 1px;
+  background-repeat: no-repeat;
+}
+
+.dots__dot--minimize {
+  background-color: #FFBD2E;
+  border: 1px solid #DFA123;
+}
+
+.dots__dot--minimize:hover{
+  background-image: url('/img/dot_minimize.svg');
+  background-size: 10px 9px;
+  background-position: 1px;
+  background-repeat: no-repeat;
+}
+
+.dots__dot--maximize {
+  background-color: #29CC41;
+  border: 1px solid #1DAD2B;
+}
+
+.dots__dot--maximize:hover{
+  background-image: url('/img/dot_maximize.svg');
+  background-size: 10px 9px;
+  background-position: 1px;
+  background-repeat: no-repeat;
+}
+
+.email {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.social--visible {
+  opacity: 1;
+}
+
+.social a {
+  color: inherit;
+  opacity: 0.2;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.social a:hover {
+  opacity: 0.8;
+}
+
+.typed-cursor {
+  font-size: 1.4em;
+  line-height: 0;
+  letter-spacing: -12px;
+  position: relative;
+  top: 2px;
+  left: -5px;
+}
+
+.typed-cursor::after {
+  content: '|||||';
+}
+
+#typed__strings {
+  display: none;
+}
+
+.base0A {
+  color: #f7ca88;
+}
+
+.base0B {
+  color: #a1b56c;
+}
+
+.base0C {
+  color: #86c1b9;
+}
+
+.base0E {
+  color: #ba8baf;
+}
+
+.base0F {
+  color: #a16946;
+}
+
+.base08 {
+  color: #ab4642;
+}
+
+.base09 {
+  color: #dc9656;
+}
+
+@media screen and (min-width: 768px) {
+  .social {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shell {
+    margin: 0 25vw;
+    width: 50vw;
+  }
+
+  .social {
+    width: 30%;
+  }
+}
+
+@-webkit-keyframes show-shell {
+  from {
+    bottom: -74vh;
+    opacity: 0;
+  }
+  to {
+    bottom: 25vh;
+    opacity: 1;
+  }
+}
+
+@keyframes show-shell {
+  from {
+    bottom: -74vh;
+    opacity: 0;
+  }
+  to {
+    bottom: 25vh;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hide-shell {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+  }
+}
+
+@keyframes hide-shell {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+  }
+}
+
+@-webkit-keyframes minimize-shell {
+  from {
+    bottom: 25vh;
+  }
+  to {
+    bottom: -37vh;
+  }
+}
+
+@keyframes minimize-shell {
+  from {
+    bottom: 25vh;
+  }
+  to {
+    bottom: -37vh;
+  }
+}
+
+@-webkit-keyframes maximize-shell {
+  from {
+    bottom: -37vh;
+  }
+  to {
+    bottom: 25vh;
+  }
+}
+
+@keyframes maximize-shell {
+  from {
+    bottom: -37vh;
+  }
+  to {
+    bottom: 25vh;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
