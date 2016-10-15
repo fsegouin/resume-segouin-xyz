@@ -29,7 +29,7 @@
       $(document).ready(function(){
         $(".dots__dot.dots__dot--close").click(function(){
           $(".message").append("Bye!");
-          $(".shell").removeClass("shell--minimized shell--maximized").addClass("shell--hidden");
+          $(".shell").addClass("shell--hidden");
         });
         $(".dots__dot.dots__dot--minimize").click(function(){
           $(".shell").removeClass("shell--maximized").addClass("shell--minimized");

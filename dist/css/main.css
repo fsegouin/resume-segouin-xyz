@@ -56,8 +56,8 @@ a {
 }
 
 .shell--hidden {
-  -webkit-animation: hide-shell 1s ease-in-out forwards;
-          animation: hide-shell 1s ease-in-out forwards;
+  -webkit-animation: hide-shell 1s ease-in-out forwards !important;
+          animation: hide-shell 1s ease-in-out forwards !important;
 }
 
 .shell--minimized {
