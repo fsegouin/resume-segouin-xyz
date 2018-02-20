@@ -58,29 +58,24 @@ a {
   box-shadow: 5px 10px 10px rgba(0,0,0,0.2);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  -webkit-animation: show-shell 2s ease-in-out;
-          animation: show-shell 2s ease-in-out;
+  animation: show-shell 2s ease-in-out;
 }
 
 .shell--hidden {
-  -webkit-animation: hide-shell 1s ease-in-out forwards !important;
-          animation: hide-shell 1s ease-in-out forwards !important;
+  animation: hide-shell 1s ease-in-out forwards !important;
 }
 
 .shell--minimized {
   bottom: -37vh;
-  -webkit-animation: minimize-shell 1s ease-in-out;
-          animation: minimize-shell 1s ease-in-out;
+  animation: minimize-shell 1s ease-in-out;
 }
 
 .shell--maximized {
   bottom: 25vh;
-  -webkit-animation: maximize-shell 1s ease-in-out;
-          animation: maximize-shell 1s ease-in-out;
+  animation: maximize-shell 1s ease-in-out;
 }
 
 .shell__window {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
@@ -104,7 +99,6 @@ a {
 }
 
 .dots__container {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 43px;
@@ -165,7 +159,6 @@ a {
 }
 
 .social {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
@@ -175,7 +168,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
-  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
@@ -186,7 +178,6 @@ a {
 .social a {
   color: inherit;
   opacity: 0.2;
-  -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 
@@ -273,17 +264,6 @@ a {
     }
 }
 
-@-webkit-keyframes show-shell {
-  from {
-    bottom: -74vh;
-    opacity: 0;
-  }
-  to {
-    bottom: 25vh;
-    opacity: 1;
-  }
-}
-
 @keyframes show-shell {
   from {
     bottom: -74vh;
@@ -295,42 +275,15 @@ a {
   }
 }
 
-@-webkit-keyframes hide-shell {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  30% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-  }
-  100% {
-    -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
-  }
-}
-
 @keyframes hide-shell {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   30% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    transform: translateY(-50px);
   }
   100% {
-    -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
-  }
-}
-
-@-webkit-keyframes minimize-shell {
-  from {
-    bottom: 25vh;
-  }
-  to {
-    bottom: -37vh;
+    transform: translateY(1000px);
   }
 }
 
@@ -340,15 +293,6 @@ a {
   }
   to {
     bottom: -37vh;
-  }
-}
-
-@-webkit-keyframes maximize-shell {
-  from {
-    bottom: -37vh;
-  }
-  to {
-    bottom: 25vh;
   }
 }
 
